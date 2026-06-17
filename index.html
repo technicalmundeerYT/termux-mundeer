@@ -16,10 +16,11 @@ body{
 }
 
 .logo{
-    width:220px;
-    max-width:90%;
-    border-radius:12px;
+    width:280px;
+    max-width:95%;
+    border-radius:15px;
     margin-top:20px;
+    box-shadow:0 0 20px #00ff88;
 }
 
 h1{
@@ -43,7 +44,7 @@ h1{
     padding:20px;
     border-radius:15px;
     margin:20px auto;
-    max-width:650px;
+    max-width:700px;
 }
 
 pre{
@@ -53,6 +54,7 @@ pre{
     border-radius:8px;
     text-align:left;
     overflow:auto;
+    white-space:pre-wrap;
 }
 
 input{
@@ -69,6 +71,16 @@ input{
     padding:10px;
     margin:8px;
     border-radius:6px;
+}
+
+.badge{
+    display:inline-block;
+    background:#00ff88;
+    color:#000;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:bold;
+    margin:5px;
 }
 
 .footer{
@@ -101,6 +113,14 @@ tools[i].style.display="none";
 
 <p>Custom Termux APT Repository by Technical Mundeer</p>
 
+<div>
+<span class="badge">📦 Packages</span>
+<span class="badge">⚡ APT Repo</span>
+<span class="badge">🛡 Security Tools</span>
+</div>
+
+<br>
+
 <a class="btn" href="https://youtube.com/@TechnicalMundeer">YouTube</a>
 
 <a class="btn" href="https://t.me/TechnicalMundeerYT">Telegram</a>
@@ -113,35 +133,53 @@ tools[i].style.display="none";
 <p>✔ Development Packages</p>
 <p>✔ Repository Updates</p>
 <p>✔ Radare2 Support</p>
+<p>✔ Easy Installation</p>
+<p>✔ APT Package Manager Support</p>
 
 </div>
 
 <div class="box">
+
 <h2>⚡ Install Command</h2>
 
 <pre>
-apt update
-apt upgrade -y
+curl -sL https://raw.githubusercontent.com/technicalmundeerYT/termux-mundeer/main/install.sh | bash
 </pre>
 
 </div>
 
 <div class="box">
+
 <h2>🚀 Quick Start</h2>
 
 <pre>
-# Update System
+# Install Repository
+
+curl -sL https://raw.githubusercontent.com/technicalmundeerYT/termux-mundeer/main/install.sh | bash
+</pre>
+
+<pre>
+# Update Packages
+
 apt update && apt upgrade -y
 </pre>
 
 <pre>
 # Search Package
+
 apt search package-name
 </pre>
 
 <pre>
 # Install Package
+
 apt install package-name
+</pre>
+
+<pre>
+# Remove Package
+
+apt remove package-name
 </pre>
 
 </div>
@@ -167,12 +205,35 @@ placeholder="Search Tool..."
 <div class="tool">nikto</div>
 <div class="tool">john</div>
 <div class="tool">netcat</div>
+<div class="tool">wireshark</div>
+<div class="tool">tcpdump</div>
+<div class="tool">ffuf</div>
+<div class="tool">gobuster</div>
+<div class="tool">dirsearch</div>
+<div class="tool">masscan</div>
+<div class="tool">zmap</div>
 
 </div>
 
 <div class="box">
-<h2>📊 Status</h2>
-<p>🚧 Under Development</p>
+
+<h2>📊 Repository Status</h2>
+
+<p>🟢 Online</p>
+<p>📦 Package Support Enabled</p>
+<p>⚡ APT Repository Active</p>
+
+</div>
+
+<div class="box">
+
+<h2>📋 Repository Info</h2>
+
+<p><b>Name:</b> Termux Mundeer</p>
+<p><b>Maintainer:</b> Technical Mundeer</p>
+<p><b>Package Manager:</b> APT</p>
+<p><b>Version:</b> v1.0</p>
+
 </div>
 
 <div class="footer">
