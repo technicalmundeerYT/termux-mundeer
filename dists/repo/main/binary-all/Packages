@@ -1,0 +1,20 @@
+Package: mundeer
+Version: 1.0
+Architecture: all
+Maintainer: Technical Mundeer
+Filename: pool/main/mundeer_1.0_all.deb
+Size: 1582
+MD5sum: 2b62eba20f32f9d08e7648bcb1d8616d
+SHA1: 26e9cc61e479e4ae3e1884c7e49e8f80de7dd83d
+SHA256: f7f8b4c0d12a2b6017ac41f6c5ff7e605e39147ba8f357ffed8bcf618f6ae2a8
+Section: utils
+Priority: optional
+Homepage: https://technicalmundeeryt.github.io/repo/
+Description: Official package manager for Termux Mundeer repository
+ Includes package management tools, system utilities,
+ repository updates and maintenance features.
+ Author: Technical Mundeer
+ YouTube: https://youtube.com/@TechnicalMundeer
+ Telegram: https://t.me/TechnicalMundeerYT
+ Email: technicalmundeer@gmail.com
+
