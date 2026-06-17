@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Termux Mundeer</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termux Mundeer</title>
 
 <style>
 body{
@@ -14,7 +15,8 @@ body{
 }
 
 h1{
-    font-size:40px;
+    font-size:48px;
+    margin-bottom:10px;
 }
 
 .btn{
@@ -22,18 +24,18 @@ h1{
     padding:12px 20px;
     margin:10px;
     background:#00ff88;
-    color:black;
+    color:#000;
     text-decoration:none;
-    border-radius:8px;
+    border-radius:10px;
     font-weight:bold;
 }
 
 .box{
     background:#161b22;
-    padding:15px;
-    border-radius:10px;
-    margin:15px auto;
-    max-width:500px;
+    padding:20px;
+    border-radius:12px;
+    margin:20px auto;
+    max-width:600px;
 }
 
 pre{
@@ -41,24 +43,43 @@ pre{
     color:#00ff88;
     padding:12px;
     border-radius:8px;
-    text-align:left;
     overflow:auto;
+    text-align:left;
+}
+
+input{
+    width:90%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.tool{
+    background:#0d1117;
+    margin:8px;
+    padding:10px;
+    border-radius:8px;
 }
 </style>
-
 </head>
+
 <body>
 
 <h1>🚀 Termux Mundeer</h1>
 
 <p>Custom Termux APT Repository by Technical Mundeer</p>
 
-<a class="btn" href="https://youtube.com/@TechnicalMundeer">YouTube</a>
+<a class="btn" href="https://youtube.com/@TechnicalMundeer">
+YouTube
+</a>
 
-<a class="btn" href="https://t.me/TechnicalMundeerYT">Telegram</a>
+<a class="btn" href="https://t.me/TechnicalMundeerYT">
+Telegram
+</a>
 
 <div class="box">
-<h2>Features</h2>
+<h2>📦 Features</h2>
 
 <p>✔ Custom Packages</p>
 <p>✔ Security Tools</p>
@@ -69,7 +90,7 @@ pre{
 </div>
 
 <div class="box">
-<h2>Install Command</h2>
+<h2>⚡ Install Command</h2>
 
 <pre>
 apt update
@@ -79,11 +100,38 @@ apt upgrade -y
 </div>
 
 <div class="box">
+
+<h2>🔍 Tool Search</h2>
+
+<input
+type="text"
+id="toolSearch"
+placeholder="Search tools..."
+onkeyup="searchTools()">
+
+<div id="toolList">
+
+<p class="tool">radare2</p>
+<p class="tool">nmap</p>
+<p class="tool">sqlmap</p>
+<p class="tool">metasploit-framework</p>
+<p class="tool">hydra</p>
+<p class="tool">nikto</p>
+<p class="tool">ffuf</p>
+<p class="tool">gobuster</p>
+<p class="tool">aircrack-ng</p>
+<p class="tool">john</p>
+
+</div>
+
+</div>
+
+<div class="box">
 <h2>🚀 Quick Start</h2>
 
 <pre>
 # Add Repository
-Coming Soon...
+Coming Soon
 </pre>
 
 <pre>
@@ -99,13 +147,45 @@ apt install radare2
 </div>
 
 <div class="box">
-<h2>Status</h2>
+<h2>📊 Status</h2>
 
 <p>🚧 Under Development</p>
 
 </div>
 
 <p>© Technical Mundeer</p>
+
+<script>
+function searchTools() {
+
+let input =
+document.getElementById("toolSearch");
+
+let filter =
+input.value.toLowerCase();
+
+let tools =
+document.getElementsByClassName("tool");
+
+for (let i = 0; i < tools.length; i++) {
+
+let txt =
+tools[i].textContent ||
+tools[i].innerText;
+
+if (
+txt.toLowerCase().indexOf(filter)
+> -1
+) {
+tools[i].style.display = "";
+}
+else {
+tools[i].style.display = "none";
+}
+
+}
+}
+</script>
 
 </body>
 </html>
